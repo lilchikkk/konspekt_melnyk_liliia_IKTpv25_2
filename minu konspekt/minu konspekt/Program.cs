@@ -21,7 +21,7 @@ namespace minu_konspekt
             }
             else if (nimi != "")
             {
-                Console.WriteLine("tere " +  nimi + "!"); ;
+                Console.WriteLine("tere " + nimi + "!"); ;
             }
             else
             {
@@ -83,6 +83,74 @@ namespace minu_konspekt
                 Console.WriteLine("pikkust ei tunta");
             }
 
+            /*
+int arv1 = 100; //siin on arv 100
+float arv2 = 25.5f;
+int arv3 = 50;
+int tulemus = arv1 + arv3; //siin on tehe
+Console.WriteLine("tulemus: "+tulemus);
+Console.WriteLine(" https://meet.google.com/xjy-drff-qbf"); //kuuvane
+string tekst1 = "kakoy to t5ekst";
+string tekst2 = "vtoroy tekst";
+Console.WriteLine( tekst1 + tekst2); //esistav tekst
+bool thisthing = false;
+Console.WriteLine(thisthing);
+string yourname = Console.ReadLine();
+Console.WriteLine("Tere hommikust, öpilane: " + yourname);
+*/
+            Console.WriteLine("tere, sisesta esimene liidetav arv");
+            int arv1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("tere, sisesta teine liidetav arv");
+            int arv2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("sisesta tehemärk: / * + -");
+            string tehtetyyp = Console.ReadLine();
+
+            int tulemus = 0;
+            if (tehtetyyp == "+")
+            {
+                tulemus = arv1 + arv2;
+            }
+
+            int tulemus = arv1 + arv2;
+            Console.WriteLine(tulemus);
+
+            if (tehtetyyp == "-")
+            {
+                tulemus = arv1 - arv2;
+            }
+
+            if (tehtetyyp == "*")
+            {
+                tulemus = arv1 * arv2;
+            }
+            else if (tehtetyyp == "/")
+            {
+                tulemus = arv1 / arv2;
+            }
+
+            else if (tehtetyyp == "^")
+            {
+                tulemus = (int)Math.Pow(arv1, arv2);
+            }
+            else
+            {
+                Console.WriteLine("Palun sisestada tehe, mida kalkulaator tuvastada oskab");
+            }
+            if (tulemus != 0)
+            {
+                Console.WriteLine(tulemus);
+            }
+            else
+            {
+                Console.WriteLine("Tulemus on 0, või üritasid teha tehet, mida kalkulaator ei tunne");
+            }
+            Console.WriteLine("Kas sa tahad õuna või banaani?");
+            string vastus = Console.ReadLine();
+
+            if (vastus == "õuna") ;
+            {
+                Console.WriteLine("🍎🍎🍎");
+            }
 
 
 
