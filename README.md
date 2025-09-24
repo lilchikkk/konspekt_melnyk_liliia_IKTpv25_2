@@ -1,0 +1,2 @@
+# konspekt_melnyk_liliia_IKTpv25_2
+konspekt
