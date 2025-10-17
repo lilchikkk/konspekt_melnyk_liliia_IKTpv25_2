@@ -227,7 +227,7 @@ namespace minu_konspekt
                 kõrgus = kõrgus - kannepaksust;
                 V = Sp * kõrgus;
                 // tunni ruumala on olemas ...
-                kõrgus += kannepaksust
+                kõrgus += kannepaksust;
             double Sk = 2 * Math.PI * kasutajamõõt * kõrgus;
                 // tünni küljepindala....
                 double S = Sp + Sk;
@@ -251,7 +251,7 @@ namespace minu_konspekt
                 //#    - - arvutab vastavalt kasti kogupindala, mahu, ja pikima läbiva joone (d)
                 //}
 
-                Console.Writeline("hapukapsas");
+                Console.WriteLine("hapukapsas");
                 // Console -> on modul C# mida me adresserime, Console aitab teha tegevusi käsureal
                 //         -> näitab, et meil on vaja adresserida mingisugust funktsiooni  või meetodid
                 //           mooduli "console" seest
@@ -289,11 +289,11 @@ namespace minu_konspekt
 
                 //põhilised matematilised tehted
                 int liitmine = 1 + 1; // liitmine; kaks arvu liidetakse kokku
-                int lahutamune 0 1 - 1 // lahutamine, kus esimesest srvust lahutatakse maha teine
+                int lahutamune = 1 - 1; // lahutamine, kus esimesest srvust lahutatakse maha teine
                 double korutamine = 1 * 2; // korrutamine kus teine arv korrutatakse esimene kordi
                 double jagamine = 1 / 2; //jagamine esimene srv jagatakse mteise arvuga
-                double astendamine = Math.Pow(2, 2) // astendamine esimene arv astendatakse teisega
-                double juurimine = Matht.Sqrt(2); // ruutjuur
+                double astendamine = Math.Pow(2, 2); // astendamine esimene arv astendatakse teisega
+                double juurimine = Math.Sqrt(2); // ruutjuur
 
                 // muutuja nimed
                 int arv = 0;
@@ -474,13 +474,35 @@ namespace minu_konspekt
 
                 //    Console.WriteLine($"palun siin on sinu ruut, suurusega {ruuduSuurus}x{ruuduSuurus}");
                 //}
-                  //tingimuslause osad
-                  if (true) {} //kaitsud sõna if kutsub eesle tingimuslause mille tingimus on sulgude vahel, ning järgneb
-                               //koodiplokk tingimuse teostava koodiga
-                  else if (true) {} //kaitstud sõnad else ja if kutsavad eide tingimasule mille tingimus
-                                    // on samamoodi sulgude vahel, ning millele pepad eelma alt kas if või else if  tingimuse täitumisel
-                                    //ja eelneva mitteäitumisel, teotakse koodiploki sees olev kood.
-                else {}// kaitstud sõna else kutsub else kutsub esile järgtingimusi millele peab eelmena kas if / else if , ning mille koodiplokki   sisu
+                Console.WriteLine("sisesta ostusumma");
+                double ostusumma = double.Parse(Console.ReadLine());
+                if (ostusumma> 100)
+                {
+                    Console.WriteLine("Sa saad 20% alahindlust!!!!!!!!!!!!")
+                }
+                else if(ostusumma < 101 && ostusumma > 50)
+                {
+                    Console.WriteLine("saad 10% allahindlust c:yay");
+                }
+                else if (ostusumma < 51 && ostusumma > 20)
+                {
+                    Console.WriteLine("allahindlust 5%");
+                }
+                else if (ostusumma < 21 && ostusumma > 0)
+                {
+                    Console.WriteLine("allahindlust ei saa");
+                }
+                else
+                {
+                    Console.WriteLine("sisestanud on viigane arv");
+                }
+                //tingimuslause osad
+                if (true) { } //kaitsud sõna if kutsub eesle tingimuslause mille tingimus on sulgude vahel, ning järgneb
+                              //koodiplokk tingimuse teostava koodiga
+                else if (true) { } //kaitstud sõnad else ja if kutsavad eide tingimasule mille tingimus
+                                   // on samamoodi sulgude vahel, ning millele pepad eelma alt kas if või else if  tingimuse täitumisel
+                                   //ja eelneva mitteäitumisel, teotakse koodiploki sees olev kood.
+                else { }// kaitstud sõna else kutsub else kutsub esile järgtingimusi millele peab eelmena kas if / else if , ning mille koodiplokki   sisu
                        //täidetakse kõikidele teiste if ja else if tingimuse läbikukkumisel.
 
                 /*loogilised tehted*/
