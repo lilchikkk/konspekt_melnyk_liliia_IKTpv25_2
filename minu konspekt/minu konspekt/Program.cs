@@ -503,7 +503,29 @@ namespace minu_konspekt
                                    // on samamoodi sulgude vahel, ning millele pepad eelma alt kas if või else if  tingimuse täitumisel
                                    //ja eelneva mitteäitumisel, teotakse koodiploki sees olev kood.
                 else { }// kaitstud sõna else kutsub else kutsub esile järgtingimusi millele peab eelmena kas if / else if , ning mille koodiplokki   sisu
-                       //täidetakse kõikidele teiste if ja else if tingimuse läbikukkumisel.
+                        //täidetakse kõikidele teiste if ja else if tingimuse läbikukkumisel.
+
+                int option = 3; // ---------
+                switch (option) //switch on kaitstud sõna allternatiivse tingimus kontrolli jaoks mida saab else-if asemel kasutada.
+                                //sulgude vahele käib muutuja nimi , mille põhjal tingimuslik ümberliitus  toimub, siinu vahel
+                                // ei ole tingimus ise ,vaid kõigest kontrollitav muutuja või omakorda sulgude vahel muu tingimus
+                                // pärast lülitusvakult tileb koodoplokk
+                {
+                    case 1:  //koodiplokk sees on erinevad juhtmid süsestakse kaitstud sõna  case abil  antud  juhil kontrollitakse .
+                             // kas muutuja option on väärtus 1; millele järgneb koloon . väljandades tingimuse täitmusel tehtava
+                             //kooditegevuse algust
+                        break;  // kui tegevus  on tehtud siis see on kõik
+                    case 2:
+                        break;
+                    default: // default juhtmid täidetakse siis kui ülejäänud juhtmis ei kirjelda muutujas option olevat seisu
+                        break; //ka lõppeb
+                }
+
+
+                /* sõne tööristad ja muud trkstiga seotud */
+                string alfa = "a\nb";  // tekkitab ühe sõne sisse kus on sees üks \n omad kahte riida
+                string beta = $"a{alfa}b"; //$ lubab kasutada muutujad loogiliste sulddega otse teksti sees on variant
+                                            // formateeritud stringis
 
                 /*loogilised tehted*/
 
@@ -542,11 +564,25 @@ namespace minu_konspekt
 
                 /*tsüüklid*/
                 //do-while
+                int dew = 0;
                 do //do on kaitstud sõna mis alustab do while ts, pärast seda on koodiplokk {} ning ütleb see et tee seda koodi
                 {
+                    dew++
+                } while (dew != 5); // niikaua kuni järel olevate sulgude vahel tingimus ei täitu, käivitatakse eelnev kood uuesti.
 
-                } while (true) // niikaua kuni järel olevate sulgude vahel tingimus ei täitu, käivitatakse eelnev kood uuesti.
 
+                //2, while
+                int = i = 1; // tsüükli muutujamis aitab järge pidada while tsüükli  toimisel
+                while (i < 5) // while on kaitstud sõna mis alustad while tsüükli  ariant ilma  do ning vajab alati välist
+                    //tsüüklimuutujat antul jubul on selleks i, tsükli tingimus mis peale while sõna on asub sulgude vahel,
+                    //siin kontroll tsüükli tood, läbi kindla tingimuse kasutades tsüüklimuutujas
+                    // antud juhul  tsüükeltöötab niikaua kuni i ln väiksem kui 5 kui i saana suurus  nagu 5, siis tsüükel
+                    //katkeb.
+
+
+
+                        //koodiplokk kus midagi tehakse
+                        i++;   //nini selejärel muudetakse tsmuutuja i olekut antud juhul liidetakse 1 juurde kiirtrhrga ++
             }
 
 
